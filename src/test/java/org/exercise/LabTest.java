@@ -39,5 +39,12 @@ public class LabTest {
         Assertions.assertEquals(15, Lab.sumOfTwoLargest(new int[]{1, 7, 5, 2, -1, 8}));
         Assertions.assertEquals(-2, Lab.sumOfTwoLargest(new int[]{-1, -7, -5, -2, -1, -8}));
     }
+
+    @Test
+    void mergeSortedArrays() {
+        Assertions.assertArrayEquals(new int[] {1, 2, 3, 4, 5, 6, 8, 9}, Lab.mergeSortedArrays(new int[] {1, 3, 6, 8, 0, 0, 0, 0}, new int[] {2, 9, 4, 5}));
+        Assertions.assertArrayEquals(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9}, Lab.mergeSortedArrays(new int[] {2, 4, 6, 8, 0, 0, 0, 0, 0}, new int[] {1, 3, 5, 7, 9}));
+        Assertions.assertArrayEquals(new int[] {12, 23, 43, 55, 62, 65, 74, 81}, Lab.mergeSortedArrays(new int[] {0, 0, 0, 0, 0, 0, 0, 0}, new int[] {12, 65, 23, 62, 43, 74, 55, 81}));
+    }
 }
 

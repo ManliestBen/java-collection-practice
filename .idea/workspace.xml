@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="af126f08-4c16-4a77-bca1-e05eb8df315b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exercise/LabTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exercise/Lab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exercise/Lab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/exercise/LabTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/exercise/LabTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +39,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Lab.executor": "Run",
     "JUnit.All in java-collections-lab-starter-code.executor": "Run",
+    "JUnit.LabTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/elizabethparnell/ga/product_work/java-short-course/java-collections-lab-starter-code",
+    "last_opened_file_path": "C:/Users/benja/code/java/java-collections-lab-starter-code",
     "onboarding.tips.debug.path": "/Users/elizabethparnell/ga/product_work/java-short-course/java-collections-lab-starter-code/src/main/java/org/example/Main.java"
   }
 }]]></component>
@@ -54,8 +59,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LabTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-collections-lab-starter-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.exercise" />
+      <option name="MAIN_CLASS_NAME" value="org.exercise.LabTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LabTest" />
         <item itemvalue="JUnit.All in java-collections-lab-starter-code" />
       </list>
     </recent_temporary>

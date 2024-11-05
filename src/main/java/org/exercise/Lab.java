@@ -5,6 +5,7 @@ import java.util.*;
 public class Lab {
     public static void main(String[] args) {
         //Nothing in the main method will be tested
+        mergeSortedArrays(new int[]{1, 3, 6, 8, 0, 0, 0, 0}, new int[] {2, 9, 4, 5});
     }
 
     /**
@@ -22,6 +23,17 @@ public class Lab {
      * @return An array of integers with two elements, the largest and smallest from the method parameter
      */
     public static int[] findLargestAndSmallest(int[] array) {
+        int smallest = (int) Double.POSITIVE_INFINITY;
+        int largest = (int) Double.NEGATIVE_INFINITY;
+        for (int num : array) {
+            if (num < smallest) {
+                smallest = num;
+            }
+            if (num > largest) {
+                largest = num;
+            }
+        }
+        return new int[] {smallest, largest};
     }
 
 
@@ -40,6 +52,13 @@ public class Lab {
      * @return An array of ints that doesn't contain duplicates.
      */
     public static Object[] removeDuplicatesFromArray(int[] array) {
+        ArrayList<Integer> nonDuplicates = new ArrayList<Integer>();
+        for (int num : array) {
+            if (!nonDuplicates.contains(num)) {
+                nonDuplicates.add(num);
+            }
+        }
+        return nonDuplicates.toArray();
     }
 
     /**
@@ -54,7 +73,24 @@ public class Lab {
      * @return Sum of the two largest values
      */
     public static int sumOfTwoLargest(int[] array) {
+        int largestSum = (int) Double.NEGATIVE_INFINITY;
+        if (array.length == 0) {
+            return 0;
+        } else if (array.length == 1) {
+            return array[0];
+        } else {
+            for (int i = 0; i < array.length - 1; i++) {
+                for (int j = i + 1; j < array.length; j++) {
+                    int sum = array[i] + array[j];
+                    if (sum > largestSum) {
+                        largestSum = sum;
+                    }
+                }
+            }
+        }
+        return largestSum;
     }
+
 
     //BONUS QUESTION IS BELOW
 
@@ -79,5 +115,31 @@ public class Lab {
      * @return Array of sorted integers, merged from array1 and array2
      */
     public static int[] mergeSortedArrays(int[] array1, int[] array2) {
+        for (int a2Idx = 0; a2Idx < array2.length; a2Idx++) {
+            int insertIndex = findInsertIndex(array1, array2[a2Idx]);
+            array1 = repairArray(array1, insertIndex, array2[a2Idx]);
+        }
+        System.out.println(Arrays.toString(array1));
+        return array1;
+    }
+
+    public static int findInsertIndex(int[] searchArray, int value) {
+        int searchIdx = 0;
+        for (int i = 0; i < searchArray.length; i++) {
+            if (searchArray[searchIdx] == 0) {
+                break;
+            } else if (value > searchArray[searchIdx]) {
+                searchIdx++;
+            }
+        }
+        return searchIdx;
+    }
+
+    public static int[] repairArray(int[] array, int idxToInsert, int valToInsert) {
+        for (int i = array.length - 1; i > idxToInsert; i--) {
+            array[i] = array[i - 1];
+        }
+        array[idxToInsert] = valToInsert;
+        return array;
     }
 }
